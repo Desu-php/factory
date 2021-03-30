@@ -13,4 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'IndexController@index');
+
+Auth::routes();
+
+Route::get('/', 'RequestController@index')->name('home');
+Route::post('/', 'RequestController@store')->name('store.home');
